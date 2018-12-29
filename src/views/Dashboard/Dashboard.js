@@ -19,6 +19,13 @@ import {
   Progress,
   Row,
   Table,
+  FormGroup,
+  ControlLabel,
+  Form,
+  Label,
+  Input,
+  FormText,
+
 } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
@@ -486,9 +493,89 @@ class Dashboard extends Component {
       <Row>
             <Col>
               <Card>
+                  <CardHeader>
+                                  <i className="fa fa-align-justify"></i><strong>Attacks</strong>
+                                  <div className="card-header-actions">
+                                    {/*<a href="https://reactstrap.github.io/components/breadcrumbs/" rel="noreferrer noopener" target="_blank" className="card-header-action">
+                                      <small className="text-muted">docs</small>
+                                    </a>*/}
+                                  </div>
+                  </CardHeader>
                 <CardBody>
                   <Row>
+                      <Col xs={12} md={4}>
+                        <Form>
+                                <FormGroup>
+                                  <Label for="AttackType">Attack Type</Label>
+                                  <Input type="text" name="text" id="attackType" placeholder="attackType" />
 
+                                </FormGroup>
+                                <FormGroup>
+                                  <Label for="examplePassword">Password</Label>
+                                  <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                                </FormGroup>
+                                <FormGroup>
+                                  <Label for="exampleSelect">Select</Label>
+                                  <Input type="select" name="select" id="exampleSelect">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </Input>
+                                </FormGroup>
+                                <FormGroup>
+                                  <Label for="exampleSelectMulti">Select Multiple</Label>
+                                  <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </Input>
+                                </FormGroup>
+                                <FormGroup>
+                                  <Label for="exampleText">Text Area</Label>
+                                  <Input type="textarea" name="text" id="exampleText" />
+                                </FormGroup>
+                                <FormGroup>
+                                  <Label for="exampleFile">File</Label>
+                                  <Input type="file" name="file" id="exampleFile" />
+                                  <FormText color="muted">
+                                    This is some placeholder block-level help text for the above input.
+                                    It's a bit lighter and easily wraps to a new line.
+                                  </FormText>
+                                </FormGroup>
+                                <FormGroup tag="fieldset">
+                                  <legend>Radio Buttons</legend>
+                                  <FormGroup check>
+                                    <Label check>
+                                      <Input type="radio" name="radio1" />{' '}
+                                      Option one is this and that—be sure to include why it's great
+                                    </Label>
+                                  </FormGroup>
+                                  <FormGroup check>
+                                    <Label check>
+                                      <Input type="radio" name="radio1" />{' '}
+                                      Option two can be something else and selecting it will deselect option one
+                                    </Label>
+                                  </FormGroup>
+                                  <FormGroup check disabled>
+                                    <Label check>
+                                      <Input type="radio" name="radio1" disabled />{' '}
+                                      Option three is disabled
+                                    </Label>
+                                  </FormGroup>
+                                </FormGroup>
+                                <FormGroup check>
+                                  <Label check>
+                                    <Input type="checkbox" />{' '}
+                                    Check me out
+                                  </Label>
+                                </FormGroup>
+                                <Button>Submit</Button>
+                              </Form>
+                      </Col>
                   </Row>
                 </CardBody>
 

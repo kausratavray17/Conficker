@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-// import { renderRoutes } from 'react-router-config';
+import { renderRoutes } from 'react-router-config';
 import Loadable from 'react-loadable';
 import './App.scss';
 
@@ -45,7 +45,9 @@ class App extends Component {
             <Route exact path="/500" name="Page 500" component={Page500} />
             <Route path="/" name="Home" component={DefaultLayout} />
           </Switch>
-      </HashRouter>
+    </HashRouter>
+
+    
     );
   }
 }
